@@ -120,6 +120,21 @@ li {
   .edu-header h3, .exp-header h3 {
     font-size: 1.1rem;
   }
+
+  .menu-container {
+    transform: none;
+    width: 100%;
+  }
+
+  .menu-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .menu-item {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -128,6 +143,15 @@ li {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
+  }
+
+  .menu-row {
+    gap: 1.5rem;
+  }
+
+  .menu-item {
+    font-size: 1.2rem;
+    padding: 10px 20px;
   }
 }
 
@@ -162,16 +186,14 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) scale(1.75);
+    transform: translateY(-50%);
 }
 
-.top-menu-row {
+.menu-items {
     display: flex;
     gap: 1rem;
-    margin-bottom: 0.25rem;
 }
 
 .menu-item {
@@ -187,11 +209,11 @@ li {
 }
 
 .menu-item:hover {
-  color: rgba(255, 255, 255, 0.7);
-  background-color: white;
-  color: black;
-  transform: scale(1.1);
-  filter: brightness(0.8);
+    color: rgba(255, 255, 255, 0.7);
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    filter: brightness(0.8);
 }
 
 .menu-item.active {
@@ -199,44 +221,31 @@ li {
     filter: brightness(0.8);
 }
 
-@media (max-width: 768px) {
-    .menu-container {
-        transform: translateY(-50%) scale(1.5);
-    }
-
-    .top-menu-row {
-        gap: 0.75rem;
-    }
-
-    .menu-item {
-        font-size: 0.9rem;
-    }
-
-    .home-logo {
-        width: 120px;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-container {
-        transform: translateY(-50%) scale(1.25);
-    }
-
-    .top-menu-row {
-        gap: 0.5rem;
-    }
-
-    .menu-item {
-        font-size: 0.8rem;
-    }
-
-    .home-logo {
-        width: 100px;
-    }
-} 
-
 .music-link:hover {
     color: rgba(255, 255, 255, 0.7);
     background-color: white;
     color: black;
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .menu-item {
+        font-size: 1.5rem;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-items {
+        gap: 1.5rem;
+    }
+
+    .menu-item {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
 }

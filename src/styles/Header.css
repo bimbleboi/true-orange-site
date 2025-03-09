@@ -123,8 +123,8 @@
   }
 
   .header-button {
-    padding: 3px 10px;
     font-size: 0.8rem;
+    padding: 4px 8px;
   }
 }
 
@@ -140,6 +140,7 @@
   }
 
   .header-button {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    padding: 3px 6px;
   }
 } 

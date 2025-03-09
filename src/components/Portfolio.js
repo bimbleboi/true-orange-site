@@ -8,7 +8,7 @@ const Portfolio = () => {
     return (
         <div className="portfolio-container">
             <div className="menu-container">
-                <div className="menu-row">
+                <div className="menu-items">
                     <button 
                         className="menu-item"
                         onClick={() => navigate('/music')}
