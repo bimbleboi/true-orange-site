@@ -1,4 +1,5 @@
 import React from 'react';
+import StarBackground from './StarBackground';
 import '../styles/Clothing.css';
 
 const Clothing = () => {
@@ -10,6 +11,7 @@ const Clothing = () => {
 
     return (
         <div className="music-page-container">
+            <StarBackground />
             {links.map((link, index) => (
                 <a
                     key={index}

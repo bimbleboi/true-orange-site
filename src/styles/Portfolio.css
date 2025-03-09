@@ -122,8 +122,7 @@ li {
   }
 
   .menu-container {
-    transform: none;
-    width: 100%;
+    transform: translateY(-50%) scale(1);
   }
 
   .menu-row {
@@ -188,22 +187,22 @@ li {
     justify-content: center;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(2);
 }
 
 .menu-items {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .menu-item {
     font-family: 'Rubik Mono One', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: none;
     border: none;
 }
@@ -228,6 +227,10 @@ li {
 }
 
 @media (max-width: 768px) {
+    .menu-container {
+        transform: translateY(-50%) scale(1);
+    }
+
     .menu-items {
         flex-direction: column;
         gap: 2rem;

@@ -1,4 +1,5 @@
 import React from 'react';
+import StarBackground from './StarBackground';
 import '../styles/GraffitiGallery.css';
 
 const GraffitiGallery = () => {
@@ -7,7 +8,9 @@ const GraffitiGallery = () => {
             backgroundColor: 'black', 
             minHeight: '100vh', 
             width: '100vw' 
-        }} />
+        }}>
+            <StarBackground />
+        </div>
     );
 };
 

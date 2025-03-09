@@ -60,6 +60,8 @@ function LandingPage() {
       <div className="star"></div>
       <div className="star"></div>
       <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
       <div className="content-wrapper">
         <div 
           className="logo-online-container"

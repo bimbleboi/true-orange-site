@@ -5,6 +5,7 @@ import Portfolio from './components/Portfolio';
 import GraffitiGallery from './components/GraffitiGallery';
 import Clothing from './components/Clothing';
 import './styles/App.css';
+import './styles/StarBackground.css';
 
 function App() {
   return (
