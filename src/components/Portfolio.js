@@ -8,26 +8,20 @@ const Portfolio = () => {
     return (
         <div className="portfolio-container">
             <div className="menu-container">
-                <div className="top-menu-row">
+                <div className="menu-row">
                     <button 
                         className="menu-item"
-                        onClick={() => navigate('/resume')}
+                        onClick={() => navigate('/music')}
                     >
-                        Resume
+                        Videos
                     </button>
                     <button 
                         className="menu-item"
-                        onClick={() => navigate('/clothing')}
+                        onClick={() => navigate('/videos')}
                     >
-                        Clothing
+                        Music
                     </button>
                 </div>
-                <button 
-                    className="menu-item"
-                    onClick={() => navigate('/graffiti')}
-                >
-                    Graffiti
-                </button>
             </div>
         </div>
     );

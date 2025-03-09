@@ -12,6 +12,7 @@
   align-items: center;
   gap: 0.25rem;
   position: relative;
+  text-align: center;
 }
 
 .logo-online-container {
@@ -79,7 +80,7 @@
   gap: 0.5rem;
   justify-content: center;
   margin-top: 0.25rem;
-  transform: translateX(-0.5rem);
+  transform: none;
 }
 
 .nav-button {
@@ -151,7 +152,7 @@
   }
 
   .button-container {
-    transform: translateX(-0.75rem);
+    transform: none;
   }
 
   .logo-text {
@@ -170,7 +171,7 @@
   }
 
   .button-container {
-    transform: translateX(-0.5rem);
+    transform: none;
   }
 
   .logo-text {

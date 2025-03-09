@@ -30,7 +30,6 @@ function LandingPage() {
     const animateText = async () => {
       await typeText('Music', setOnlineText, 500);
       await typeText('Portfolio', setPortfolioText, 500);
-      await typeText('Store', setStoreText, 500);
     };
 
     animateText();
@@ -81,13 +80,6 @@ function LandingPage() {
             className="nav-button"
           >
             {portfolioText || '\u00A0'}
-          </button>
-          <button 
-            onClick={() => navigate('/store')} 
-            onTouchStart={handleTouch}
-            className="nav-button store-button"
-          >
-            {storeText || '\u00A0'}
           </button>
         </div>
       </div>
