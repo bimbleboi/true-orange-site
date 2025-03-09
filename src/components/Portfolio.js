@@ -31,7 +31,7 @@ const Portfolio = () => {
                         onTouchStart={() => triggerHaptic()}
                         onTouchEnd={(e) => e.preventDefault()}
                     >
-                        Videos
+                        Visuals
                     </button>
                 </div>
             </div>
