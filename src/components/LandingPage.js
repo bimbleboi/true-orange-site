@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/LandingPage.css';
+import { triggerHaptic } from '../utils/haptics';
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -53,6 +54,11 @@ function LandingPage() {
     setIsHovered(hovering);
   };
 
+  const handleClick = () => {
+    triggerHaptic();
+    navigate('/portfolio');
+  };
+
   return (
     <div className="landing-container">
       <div className="star"></div>
@@ -76,7 +82,7 @@ function LandingPage() {
         </div>
         <div className="button-container">
           <button 
-            onClick={() => navigate('/portfolio')} 
+            onClick={handleClick} 
             onTouchStart={handleTouch}
             className="nav-button"
           >

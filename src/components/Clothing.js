@@ -1,6 +1,7 @@
 import React from 'react';
 import StarBackground from './StarBackground';
 import '../styles/Clothing.css';
+import { triggerHaptic } from '../utils/haptics';
 
 const Clothing = () => {
     const links = [
@@ -9,15 +10,22 @@ const Clothing = () => {
         { name: 'SoundCloud', url: 'https://soundcloud.com/user-435056751' }
     ];
 
+    const handleLinkClick = (url) => {
+        triggerHaptic();
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <div className="music-page-container">
             <StarBackground />
             {links.map((link, index) => (
                 <a
                     key={index}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleLinkClick(link.url);
+                    }}
                     href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="music-link"
                 >
                     {link.name}
