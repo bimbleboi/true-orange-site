@@ -28,8 +28,7 @@ function LandingPage() {
     };
 
     const animateText = async () => {
-      await typeText('Music', setOnlineText, 500);
-      await typeText('Portfolio', setPortfolioText, 500);
+      await typeText('Music', setPortfolioText, 500);
     };
 
     animateText();
@@ -67,11 +66,6 @@ function LandingPage() {
           <div className={`image-container ${isHovered ? 'hovered' : ''}`}>
             <div className="logo-text">KEMPF</div>
           </div>
-          <div className={`online-text ${isHovered ? 'hovered' : ''}`}>
-            <span className="nav-button">
-              {onlineText || '\u00A0'}
-            </span>
-          </div>
         </div>
         <div className="button-container">
           <button 
@@ -81,6 +75,11 @@ function LandingPage() {
           >
             {portfolioText || '\u00A0'}
           </button>
+        </div>
+        <div className="social-links">
+          <a href="https://www.tiktok.com/@kempfmf" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <span className="divider">•</span>
+          <a href="https://www.instagram.com/kempfmf/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>
     </div>

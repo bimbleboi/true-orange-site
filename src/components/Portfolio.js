@@ -13,13 +13,13 @@ const Portfolio = () => {
                         className="menu-item"
                         onClick={() => navigate('/music')}
                     >
-                        Videos
+                        Streaming
                     </button>
                     <button 
                         className="menu-item"
                         onClick={() => navigate('/videos')}
                     >
-                        Music
+                        Videos
                     </button>
                 </div>
             </div>

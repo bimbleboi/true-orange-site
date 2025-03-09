@@ -85,14 +85,14 @@
 
 .nav-button {
   padding: 15px 15px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   background: transparent;
   border: none;
   color: white;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: 'Special Elite', monospace;
-  min-width: 120px;
+  min-width: 150px;
   text-align: center;
 }
 
@@ -189,4 +189,32 @@
 
 .logo-online-container:hover .logo-text {
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4)) brightness(0.8);
+}
+
+.social-links {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-family: 'Special Elite', monospace;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.social-links .divider {
+    color: white;
+    font-size: 1rem;
 } 
