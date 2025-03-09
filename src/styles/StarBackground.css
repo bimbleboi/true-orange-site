@@ -128,4 +128,87 @@
   --cluster-x: -35px;
   --cluster-y: 45px;
   animation-delay: 1.2s, 0s;
+}
+
+/* Add new glitch animations */
+@keyframes starGlitch {
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  11% {
+    transform: translate(-2px, 1px);
+    opacity: 0.8;
+  }
+  12% {
+    transform: translate(2px, -1px);
+    opacity: 1;
+  }
+  44% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translate(1px, -2px);
+    opacity: 0.8;
+  }
+  46% {
+    transform: translate(-1px, 2px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+/* Add glitch effect to specific stars */
+.star:nth-child(2)::before,
+.star:nth-child(5)::before {
+  animation: starRotate 3s linear infinite, starGlitch 4s infinite;
+}
+
+.star:nth-child(2)::after,
+.star:nth-child(5)::after {
+  animation: starRotate 3s linear infinite reverse, starGlitch 4.2s infinite;
+}
+
+/* Add color split effect during glitch */
+.star:nth-child(2)::before,
+.star:nth-child(5)::before {
+  box-shadow: 0 0 4px #0ff,
+              0 0 8px #0ff,
+              0 0 12px #0ff,
+              0 0 16px rgba(0, 255, 255, 0.5);
+}
+
+.star:nth-child(2)::after,
+.star:nth-child(5)::after {
+  box-shadow: 0 0 4px #f0f,
+              0 0 8px #f0f,
+              0 0 12px #f0f,
+              0 0 16px rgba(255, 0, 255, 0.5);
+}
+
+/* Add more dramatic glitch to one star */
+.star:nth-child(7) {
+  animation: twinkle var(--duration) ease-in-out infinite,
+             cluster var(--cluster-duration) ease-in-out infinite,
+             starGlitch 3s infinite;
+}
+
+.star:nth-child(7)::before {
+  box-shadow: 0 0 4px #0ff,
+              0 0 8px #0ff,
+              0 0 12px #0ff,
+              0 0 16px rgba(0, 255, 255, 0.5);
+  animation: starRotate 3s linear infinite, starGlitch 3.5s infinite;
+}
+
+.star:nth-child(7)::after {
+  box-shadow: 0 0 4px #f0f,
+              0 0 8px #f0f,
+              0 0 12px #f0f,
+              0 0 16px rgba(255, 0, 255, 0.5);
+  animation: starRotate 3s linear infinite reverse, starGlitch 3.7s infinite;
 } 
