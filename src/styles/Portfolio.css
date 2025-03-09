@@ -175,7 +175,7 @@ li {
 }
 
 .menu-item {
-    font-family: 'Special Elite', monospace;
+    font-family: 'Rubik Mono One', sans-serif;
     font-size: 1rem;
     color: white;
     text-decoration: none;
@@ -187,8 +187,11 @@ li {
 }
 
 .menu-item:hover {
-    transform: scale(1.1);
-    filter: brightness(0.8);
+  color: rgba(255, 255, 255, 0.7);
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+  filter: brightness(0.8);
 }
 
 .menu-item.active {
@@ -231,3 +234,9 @@ li {
         width: 100px;
     }
 } 
+
+.music-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: white;
+    color: black;
+}

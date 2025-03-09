@@ -45,7 +45,7 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: 'Special Elite', monospace;
+  font-family: 'Rubik Mono One', sans-serif;
   width: 100%;
   text-align: left;
 }
