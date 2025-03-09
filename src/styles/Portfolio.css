@@ -187,7 +187,7 @@ li {
     justify-content: center;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) scale(2);
+    transform: translateY(-50%) scale(1.75);
 }
 
 .menu-items {
@@ -197,12 +197,12 @@ li {
 
 .menu-item {
     font-family: 'Rubik Mono One', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 12px 24px;
+    padding: 10px 20px;
     background: none;
     border: none;
 }
@@ -237,8 +237,8 @@ li {
     }
 
     .menu-item {
-        font-size: 1.5rem;
-        padding: 12px 24px;
+        font-size: 1.2rem;
+        padding: 10px 20px;
     }
 }
 
