@@ -7,7 +7,7 @@ import { triggerHaptic } from '../utils/haptics';
 const Portfolio = () => {
     const navigate = useNavigate();
 
-    const handleNavigation = (path) => {
+    const handleButtonPress = (path) => {
         triggerHaptic();
         navigate(path);
     };
@@ -19,13 +19,17 @@ const Portfolio = () => {
                 <div className="menu-items">
                     <button 
                         className="menu-item"
-                        onClick={() => handleNavigation('/music')}
+                        onClick={() => handleButtonPress('/music')}
+                        onTouchStart={() => triggerHaptic()}
+                        onTouchEnd={(e) => e.preventDefault()}
                     >
                         Streaming
                     </button>
                     <button 
                         className="menu-item"
-                        onClick={() => handleNavigation('/videos')}
+                        onClick={() => handleButtonPress('/videos')}
+                        onTouchStart={() => triggerHaptic()}
+                        onTouchEnd={(e) => e.preventDefault()}
                     >
                         Videos
                     </button>
