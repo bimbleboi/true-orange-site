@@ -61,38 +61,18 @@ function LandingPage() {
 
   return (
     <div className="landing-container">
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="content-wrapper">
-        <div 
-          className="logo-online-container"
-          onMouseEnter={() => handleHover(true)}
-          onMouseLeave={() => handleHover(false)}
-          onClick={() => navigate('/')}
-          onTouchStart={handleTouch}
+      <StarBackground />
+      <div className="content">
+        <h1 
+          className="glitch-text"
+          onClick={() => navigate('/music')}
+          style={{ cursor: 'pointer' }}
         >
-          <div className={`image-container ${isHovered ? 'hovered' : ''}`}>
-            <div className="logo-text">KEMPF</div>
-          </div>
-        </div>
+          KEMPF
+        </h1>
         <div className="button-container">
-          <button 
-            onClick={handleClick} 
-            onTouchStart={handleTouch}
-            className="nav-button"
-          >
-            {portfolioText || '\u00A0'}
-          </button>
-        </div>
-        <div className="social-links">
-          <a href="https://www.tiktok.com/@kempfmf" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <span className="divider">•</span>
-          <a href="https://www.instagram.com/kempfmf/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <button onClick={() => navigate('/music')}>MUSIC</button>
+          <button onClick={() => navigate('/videos')}>VISUALS</button>
         </div>
       </div>
     </div>
