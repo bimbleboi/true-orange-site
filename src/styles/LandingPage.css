@@ -252,6 +252,12 @@
   position: relative;
   text-align: center;
   animation: glitch 2s infinite;
+  -webkit-text-stroke: 0.5px white;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 @keyframes glitch {
@@ -596,4 +602,26 @@
   height: auto;
   border-radius: 10px;
   opacity: 0.8;
+}
+
+/* Add OS-specific optimizations */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .logo-text {
+    -webkit-font-smoothing: none;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min--moz-device-pixel-ratio: 0) {
+  .logo-text {
+    -moz-osx-font-smoothing: unset;
+    font-weight: 400;
+  }
+}
+
+@supports (-ms-ime-align: auto) {
+  .logo-text {
+    font-weight: 400;
+    -webkit-text-stroke: 0.75px white;
+  }
 } 
