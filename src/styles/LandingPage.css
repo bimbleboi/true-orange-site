@@ -8,6 +8,14 @@
   overflow: hidden;
 }
 
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -8rem; /* Move KEMPF up by 8rem */
+}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -99,11 +107,8 @@
 }
 
 .nav-button:hover {
-  color: rgba(255, 255, 255, 0.7);
-  background-color: white;
-  color: black;
+  opacity: 0.7;
   transform: scale(1.1);
-  filter: brightness(0.8);
 }
 
 .nav-button:active,
@@ -175,6 +180,19 @@
   .social-links a {
     font-size: 0.8rem;
   }
+
+  .streaming-links {
+    bottom: 7rem;  /* Adjusted from 8rem */
+  }
+
+  .streaming-links a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .content {
+    margin-top: -6rem;  /* Smaller shift up on tablets */
+  }
 }
 
 @media (max-width: 480px) {
@@ -203,16 +221,28 @@
   .social-links a {
     font-size: 0.7rem;
   }
+
+  .streaming-links {
+    bottom: 5rem;  /* Adjusted from 6rem */
+  }
+
+  .streaming-links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .content {
+    margin-top: -4rem;  /* Even smaller shift up on mobile */
+  }
 }
 
 .logo-text {
   font-size: 5rem;
   font-family: 'Rubik Glitch', cursive;
   color: white;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: glitch 2s infinite;
   position: relative;
+  text-align: center;
+  animation: glitch 2s infinite;
 }
 
 @keyframes glitch {
@@ -349,7 +379,8 @@
 }
 
 .logo-online-container:hover .logo-text {
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4)) brightness(0.8);
+  /* Removing the hover effect that adds shadows */
+  transform: scale(1.1);
 }
 
 .social-links {
@@ -511,4 +542,35 @@
   --cluster-x: -35px;
   --cluster-y: 45px;
   animation-delay: 1.2s, 0s;
+}
+
+.streaming-links {
+  position: fixed;
+  bottom: 10rem;  /* Adjusted from 12rem */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1rem;
+}
+
+.streaming-links a {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.streaming-links img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.streaming-links a:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
 } 

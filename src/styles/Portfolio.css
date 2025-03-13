@@ -210,16 +210,12 @@ li {
 }
 
 .menu-item:hover {
-    color: rgba(255, 255, 255, 0.7);
-    background-color: white;
-    color: black;
+    opacity: 0.7;
     transform: scale(1.1);
-    filter: brightness(0.8);
 }
 
 .menu-item.active {
     transform: scale(1.1);
-    filter: brightness(0.8);
 }
 
 .music-link:hover {

@@ -1,82 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import '../styles/LandingPage.css';
-import { triggerHaptic } from '../utils/haptics';
+import StarBackground from './StarBackground';
 
 function LandingPage() {
-  const navigate = useNavigate();
-  const [onlineText, setOnlineText] = useState('');
-  const [portfolioText, setPortfolioText] = useState('');
-  const [storeText, setStoreText] = useState('');
-  const [isHovered, setIsHovered] = useState(false);
-  
-  useEffect(() => {
-    const typeText = (text, setText, delay) => {
-      return new Promise((resolve) => {
-        let index = 0;
-        setTimeout(() => {
-          const interval = setInterval(() => {
-            if (index < text.length) {
-              setText(text.slice(0, index + 1));
-              index++;
-            } else {
-              clearInterval(interval);
-              resolve();
-            }
-          }, 150);
-        }, delay);
-      });
-    };
-
-    const animateText = async () => {
-      await typeText('Music', setPortfolioText, 500);
-    };
-
-    animateText();
-
-    // Cleanup function
-    return () => {
-      setOnlineText('');
-      setPortfolioText('');
-      setStoreText('');
-    };
-  }, []);
-
-  const handleTouch = (event) => {
-    const element = event.currentTarget;
-    element.classList.add('touched');
-    setTimeout(() => {
-      element.classList.remove('touched');
-    }, 300); // Remove class after animation completes
-  };
-
-  const handleHover = (hovering) => {
-    setIsHovered(hovering);
-  };
-
-  const handleClick = () => {
-    triggerHaptic();
-    navigate('/portfolio');
-  };
-
   return (
     <div className="landing-container">
       <StarBackground />
       <div className="content">
-        <h1 
-          className="glitch-text"
-          onClick={() => navigate('/music')}
-          style={{ cursor: 'pointer' }}
-        >
+        <h1 className="logo-text">
           KEMPF
         </h1>
-        <div className="button-container">
-          <button onClick={() => navigate('/music')}>MUSIC</button>
-          <button onClick={() => navigate('/videos')}>VISUALS</button>
-        </div>
+      </div>
+      <div className="streaming-links">
+        <a href="https://open.spotify.com/artist/4gVoibhSs8t32lkvQyU3uR" target="_blank" rel="noopener noreferrer">
+          <img src="/images/spotify logo 2.jpg" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/aidan-kempf/1655182116" target="_blank" rel="noopener noreferrer">
+          <img src="/images/apple music 2.jpg" alt="Apple Music" />
+        </a>
+        <a href="https://soundcloud.com/user-435056751" target="_blank" rel="noopener noreferrer">
+          <img src="/images/souncloud logo 2.jpg" alt="SoundCloud" />
+        </a>
+      </div>
+      <div className="social-links">
+        <a href="https://www.tiktok.com/@kempfmf" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <span className="divider">•</span>
+        <a href="https://www.instagram.com/kempfmf/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </div>
     </div>
   );
 }
 
-export default LandingPage; 
+export default LandingPage;
