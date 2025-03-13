@@ -10,6 +10,9 @@ function LandingPage() {
         <h1 className="logo-text">
           KEMPF
         </h1>
+        <div className="gif-container">
+          <img src="/images/shoe-gif-2.gif" alt="Animated shoe" className="shoe-gif" />
+        </div>
       </div>
       <div className="streaming-links">
         <a href="https://open.spotify.com/artist/4gVoibhSs8t32lkvQyU3uR" target="_blank" rel="noopener noreferrer">

@@ -25,3 +25,11 @@ body {
   font-family: 'Rubik Glitch';
   src: url('/fonts/RubikGlitch-Regular.ttf') format('truetype');
 }
+body {
+  font-family: 'Rubik Glitch', sans-serif;
+  @supports (-webkit-touch-callout: none) {
+    body {
+      -webkit-font-smoothing: antialiased !important;
+      font-weight: 600 !important;
+    }
+  }}
