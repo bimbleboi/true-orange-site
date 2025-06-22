@@ -7,18 +7,20 @@ function LandingPage() {
     <div className="landing-container">
       <StarBackground />
       <div className="content">
-        <h1 className="logo-text">
-          KEMPF
-        </h1>
+        <img 
+          src="/images/IMG_4591 2.png" 
+          alt="KEMPF Logo" 
+          className="logo glitch"
+        />
         <div className="gif-container">
-          <img src="/images/shoe-gif-2.gif" alt="Animated shoe" className="shoe-gif" />
+          <img src="/images/mark-trois.gif" alt="Animated scene" className="shoe-gif" />
         </div>
       </div>
       <div className="streaming-links">
         <a href="https://open.spotify.com/artist/4gVoibhSs8t32lkvQyU3uR" target="_blank" rel="noopener noreferrer">
           <img src="/images/spotify logo 2.jpg" alt="Spotify" />
         </a>
-        <a href="https://music.apple.com/aidan-kempf/1655182116" target="_blank" rel="noopener noreferrer">
+        <a href="https://music.apple.com/us/artist/aidan-kempf/1655182116" target="_blank" rel="noopener noreferrer">
           <img src="/images/apple music 2.jpg" alt="Apple Music" />
         </a>
         <a href="https://soundcloud.com/user-435056751" target="_blank" rel="noopener noreferrer">
