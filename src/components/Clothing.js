@@ -1,6 +1,7 @@
 import React from 'react';
 import StarBackground from './StarBackground';
 import '../styles/Clothing.css';
+import '../styles/LandingPage.css';
 import { triggerHaptic } from '../utils/haptics';
 
 const Clothing = () => {
@@ -18,6 +19,13 @@ const Clothing = () => {
     return (
         <div className="music-page-container">
             <StarBackground />
+            <div className="music-page-logo">
+                <img 
+                    src="/images/IMG_4591 2.png" 
+                    alt="KEMPF Logo" 
+                    className="logo glitch"
+                />
+            </div>
             {links.map((link, index) => (
                 <a
                     key={index}

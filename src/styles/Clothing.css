@@ -263,6 +263,23 @@
     justify-content: center;
     gap: 1rem;
     padding: 2rem;
+    position: relative;
+}
+
+.music-page-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -8rem;
+    text-align: center;
+    z-index: 10;
+}
+
+.music-page-logo .logo {
+    max-width: 400px;
+    width: 90%;
+    height: auto;
 }
 
 .music-link {
@@ -285,6 +302,10 @@
 }
 
 @media (max-width: 768px) {
+    .music-page-logo .logo {
+        max-width: 300px;
+    }
+
     .music-link {
         width: 90%;
         font-size: 1.2rem;
@@ -293,6 +314,10 @@
 }
 
 @media (max-width: 480px) {
+    .music-page-logo .logo {
+        max-width: 250px;
+    }
+
     .music-link {
         width: 95%;
         font-size: 1rem;

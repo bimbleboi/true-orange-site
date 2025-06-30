@@ -28,9 +28,11 @@ function LandingPage() {
         </a>
       </div>
       <div className="social-links">
-        <a href="https://www.tiktok.com/@kempfmf" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://www.instagram.com/kempfmf/" target="_blank" rel="noopener noreferrer" className="instagram-button">
+          <img src="/images/instalogo.jpg" alt="Instagram" />
+        </a>
         <span className="divider">•</span>
-        <a href="https://www.instagram.com/kempfmf/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="/more">MORE</a>
       </div>
     </div>
   );
