@@ -183,7 +183,7 @@
   }
 
   .streaming-links {
-    bottom: 7rem;  /* Adjusted from 8rem */
+    bottom: 8rem;  /* Increased spacing for tablet */
   }
 
   .streaming-links a {
@@ -201,7 +201,7 @@
 
   .bio-section {
     bottom: 2rem;
-    width: 90%;
+    width: 80%;
   }
 
   .bio-text {
@@ -238,7 +238,7 @@
   }
 
   .streaming-links {
-    bottom: 5rem;  /* Adjusted from 6rem */
+    bottom: 7rem;  /* Increased spacing for mobile */
   }
 
   .streaming-links a {
@@ -256,7 +256,7 @@
 
   .bio-section {
     bottom: 1rem;
-    width: 95%;
+    width: 90%;
   }
 
   .bio-text {
@@ -419,7 +419,7 @@
 }
 
 .social-links {
-    position: fixed;
+    position: absolute;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
@@ -755,8 +755,8 @@
   bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
-  max-width: 600px;
+  width: 65%;
+  max-width: 400px;
   z-index: 1000;
 }
 
@@ -777,6 +777,8 @@
 .bio-text:last-child {
   margin-bottom: 0;
 }
+
+
 
 @keyframes matrix-glow {
   from {
