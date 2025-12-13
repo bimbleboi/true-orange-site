@@ -4,17 +4,23 @@ import StarBackground from './StarBackground';
 
 function LandingPage() {
   return (
-    <div className="landing-container">
+    <div 
+      className="landing-container"
+      style={{
+        backgroundImage: 'url(/images/mark-trois.gif)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <StarBackground />
+      <div className="content-backdrop"></div>
       <div className="content">
         <img 
           src="/images/IMG_4591 2.png" 
           alt="KEMPF Logo" 
           className="logo glitch"
         />
-        <div className="gif-container">
-          <img src="/images/mark-trois.gif" alt="Animated scene" className="shoe-gif" />
-        </div>
       </div>
       <div className="streaming-links">
         <a href="https://open.spotify.com/artist/4gVoibhSs8t32lkvQyU3uR" target="_blank" rel="noopener noreferrer">
@@ -28,7 +34,7 @@ function LandingPage() {
         </a>
       </div>
       <div className="social-links">
-        <a href="https://www.instagram.com/kempfmf/" target="_blank" rel="noopener noreferrer" className="instagram-button">
+        <a href="https://www.instagram.com/kempf.wav/" target="_blank" rel="noopener noreferrer" className="instagram-button">
           <img src="/images/instalogo.jpg" alt="Instagram" />
         </a>
         <span className="divider">•</span>

@@ -45,7 +45,7 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   width: 100%;
   text-align: left;
 }
@@ -93,7 +93,7 @@
   align-items: center;
   height: 25px;
   padding: 0 1rem;
-  font-family: 'Special Elite', monospace;
+  font-family: 'Times New Roman', Times, serif;
   color: rgba(255, 255, 255, 0.8);
 }
 

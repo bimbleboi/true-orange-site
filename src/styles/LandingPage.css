@@ -8,13 +8,26 @@
   overflow: hidden;
 }
 
+.content-backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: calc(80vh + 50px);
+  background-color: rgba(0, 0, 0, 1.0);
+  z-index: 15;
+  pointer-events: none;
+}
+
 .content {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -8rem; /* Move KEMPF up by 8rem */
+  margin-top: -11rem; /* Move KEMPF up by 11rem */
   text-align: center;
+  z-index: 20;
 }
 
 .content-wrapper {
@@ -102,7 +115,7 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   min-width: 150px;
   text-align: center;
 }
@@ -192,11 +205,12 @@
   }
 
   .content {
-    margin-top: -6rem;  /* Smaller shift up on tablets */
+    margin-top: -9rem;  /* Smaller shift up on tablets */
   }
 
-  .gif-container {
-    width: 250px;
+  .content-backdrop {
+    width: 300px;
+    height: calc(75vh + 50px);
   }
 
   .bio-section {
@@ -247,11 +261,12 @@
   }
 
   .content {
-    margin-top: -4rem;  /* Even smaller shift up on mobile */
+    margin-top: -7rem;  /* Even smaller shift up on mobile */
   }
 
-  .gif-container {
-    width: 200px;
+  .content-backdrop {
+    width: 250px;
+    height: calc(70vh + 50px);
   }
 
   .bio-section {
@@ -267,7 +282,7 @@
 
 .logo-text {
   font-size: 5rem;
-  font-family: 'Rubik Glitch', cursive;
+  font-family: 'Times New Roman', Times, serif;
   color: white;
   position: relative;
   text-align: center;
@@ -420,14 +435,15 @@
 
 .social-links {
     position: absolute;
-    bottom: 2rem;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 20;
 }
 
 .social-links a {
@@ -492,7 +508,7 @@
   animation: twinkle var(--duration) ease-in-out infinite,
              cluster var(--cluster-duration) ease-in-out infinite;
   opacity: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 /* Create star shape using pseudo-elements */
@@ -618,12 +634,12 @@
 
 .streaming-links {
   position: absolute;
-  bottom: 8rem;
+  bottom: 11rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 1.5rem;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .streaming-links a {
@@ -646,19 +662,6 @@
   transform: scale(1.1);
 }
 
-.gif-container {
-  margin-top: 2rem;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.shoe-gif {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  opacity: 0.8;
-}
 
 .logo.glitch {
   position: relative;
@@ -752,17 +755,17 @@
 
 .bio-section {
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
   max-width: 400px;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .bio-text {
   color: white;
-  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1rem;
   line-height: 1.8;
   text-align: center;
@@ -776,6 +779,18 @@
 
 .bio-text:last-child {
   margin-bottom: 0;
+}
+
+.bio-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.bio-link:hover {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.7);
 }
 
 
@@ -792,7 +807,7 @@
 }
 
 .social-links a[href="/more"] {
-  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  font-family: 'Times New Roman', Times, serif;
   color: white;
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
