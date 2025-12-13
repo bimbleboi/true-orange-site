@@ -1,6 +1,7 @@
 .landing-container {
   background-color: black;
-  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh; /* Fallback for browsers that don't support svh */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,20 +15,24 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: calc(80vh + 50px);
+  height: calc(80svh + 50px);
+  height: calc(80dvh + 50px); /* Fallback */
   background-color: rgba(0, 0, 0, 1.0);
   z-index: 15;
-  pointer-events: none;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
 }
 
 .content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: -11rem; /* Move KEMPF up by 11rem */
+  position: relative;
   text-align: center;
   z-index: 20;
+  margin-top: auto;
+  padding-top: 2rem;
 }
 
 .content-wrapper {
@@ -170,7 +175,7 @@
 
 @media (max-width: 768px) {
   .logo {
-    max-width: 300px;
+    max-width: 380px;
   }
 
   .logo-text {
@@ -187,34 +192,32 @@
     transform: none;
   }
 
-  .social-links {
-    bottom: 1.5rem;
-  }
-
   .social-links a {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
   }
 
-  .streaming-links {
-    bottom: 8rem;  /* Increased spacing for tablet */
+  .social-links .instagram-button {
+    width: 28px;
+    height: 28px;
   }
 
   .streaming-links a {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
   }
 
   .content {
-    margin-top: -9rem;  /* Smaller shift up on tablets */
+    padding-top: 1.5rem;
   }
 
   .content-backdrop {
     width: 300px;
-    height: calc(75vh + 50px);
+    height: calc(70svh + 50px);
+    height: calc(70dvh + 50px); /* Fallback */
   }
 
+
   .bio-section {
-    bottom: 2rem;
     width: 80%;
   }
 
@@ -226,7 +229,7 @@
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 250px;
+    max-width: 320px;
   }
 
   .logo-text {
@@ -243,34 +246,32 @@
     transform: none;
   }
 
-  .social-links {
-    bottom: 1rem;
-  }
 
   .social-links a {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
   }
 
-  .streaming-links {
-    bottom: 7rem;  /* Increased spacing for mobile */
+  .social-links .instagram-button {
+    width: 24px;
+    height: 24px;
   }
 
   .streaming-links a {
-    width: 40px;
-    height: 40px;
-  }
-
-  .content {
-    margin-top: -7rem;  /* Even smaller shift up on mobile */
+    width: 28px;
+    height: 28px;
   }
 
   .content-backdrop {
     width: 250px;
-    height: calc(70vh + 50px);
+    height: calc(65svh + 50px);
+    height: calc(65dvh + 50px); /* Fallback */
+  }
+
+  .content {
+    padding-top: 1rem;
   }
 
   .bio-section {
-    bottom: 1rem;
     width: 90%;
   }
 
@@ -434,16 +435,17 @@
 }
 
 .social-links {
-    position: absolute;
-    bottom: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
     font-family: 'Times New Roman', Times, serif;
     z-index: 20;
+    margin-top: auto;
+    width: 100%;
 }
 
 .social-links a {
@@ -633,13 +635,14 @@
 }
 
 .streaming-links {
-  position: absolute;
-  bottom: 11rem;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   z-index: 20;
+  margin-top: auto;
+  width: 100%;
 }
 
 .streaming-links a {
@@ -754,13 +757,13 @@
 }
 
 .bio-section {
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   width: 65%;
   max-width: 400px;
   z-index: 20;
+  margin-top: auto;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  text-align: center;
 }
 
 .bio-text {
