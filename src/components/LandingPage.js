@@ -32,13 +32,9 @@ function LandingPage() {
           <a href="https://soundcloud.com/user-435056751" target="_blank" rel="noopener noreferrer">
             <img src="/images/souncloud logo 2.jpg" alt="SoundCloud" />
           </a>
-        </div>
-        <div className="social-links">
-          <a href="https://www.instagram.com/kempf.wav/" target="_blank" rel="noopener noreferrer" className="instagram-button">
+          <a href="https://www.instagram.com/kempf.wav/" target="_blank" rel="noopener noreferrer">
             <img src="/images/instalogo.jpg" alt="Instagram" />
           </a>
-          <span className="divider">•</span>
-          <a href="/more">MORE</a>
         </div>
       </div>
     </div>

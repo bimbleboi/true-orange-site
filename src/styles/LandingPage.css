@@ -32,7 +32,7 @@
   text-align: center;
   z-index: 20;
   margin-top: auto;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
 
 .content-wrapper {
@@ -192,14 +192,6 @@
     transform: none;
   }
 
-  .social-links a {
-    font-size: 0.65rem;
-  }
-
-  .social-links .instagram-button {
-    width: 28px;
-    height: 28px;
-  }
 
   .streaming-links a {
     width: 36px;
@@ -207,7 +199,7 @@
   }
 
   .content {
-    padding-top: 1.5rem;
+    padding-top: 0.5rem;
   }
 
   .content-backdrop {
@@ -247,14 +239,6 @@
   }
 
 
-  .social-links a {
-    font-size: 0.55rem;
-  }
-
-  .social-links .instagram-button {
-    width: 24px;
-    height: 24px;
-  }
 
   .streaming-links a {
     width: 28px;
@@ -268,7 +252,7 @@
   }
 
   .content {
-    padding-top: 1rem;
+    padding-top: 0.25rem;
   }
 
   .bio-section {
@@ -434,72 +418,7 @@
   transform: scale(1.1);
 }
 
-.social-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-    font-family: 'Times New Roman', Times, serif;
-    z-index: 20;
-    margin-top: auto;
-    width: 100%;
-}
 
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.social-links .divider {
-    color: white;
-    font-size: 1rem;
-}
-
-.social-links img {
-    width: 1.5rem;
-    height: 1.5rem;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover img {
-    filter: brightness(0) invert(0.7);
-}
-
-.social-links .instagram-button {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.social-links .instagram-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: none;
-}
-
-.social-links .instagram-button:hover {
-    opacity: 0.7;
-    transform: scale(1.1);
-}
-
-.social-links .instagram-button:hover img {
-    filter: none;
-}
 
 /* Star base styles */
 .star {
@@ -643,6 +562,7 @@
   z-index: 20;
   margin-top: auto;
   width: 100%;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
 }
 
 .streaming-links a {
@@ -654,11 +574,12 @@
   transition: all 0.3s ease;
 }
 
-.streaming-links img {
+.streaming-links a img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
 
 .streaming-links a:hover {
   opacity: 0.7;
@@ -809,17 +730,6 @@
   }
 }
 
-.social-links a[href="/more"] {
-  font-family: 'Times New Roman', Times, serif;
-  color: white;
-  letter-spacing: 0.1em;
-  transition: all 0.3s ease;
-}
-
-.social-links a[href="/more"]:hover {
-  color: rgba(255, 255, 255, 0.7);
-  transform: scale(1.05);
-}
 
 @keyframes matrix-text-glow {
   from {
