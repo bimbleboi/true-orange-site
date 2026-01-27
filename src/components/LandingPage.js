@@ -22,20 +22,29 @@ function LandingPage() {
             className="logo glitch"
           />
         </div>
+        <div className="spotlight-cover">
+          <div className="spotlight-text">SPOTLIGHT OUT NOW</div>
+          <img 
+            src="/images/spotlight cover.png" 
+            alt="Spotlight Cover" 
+            className="spotlight-image"
+          />
+        </div>
         <div className="streaming-links">
-          <a href="https://open.spotify.com/artist/4gVoibhSs8t32lkvQyU3uR" target="_blank" rel="noopener noreferrer">
+          <a href="https://open.spotify.com/artist/5JKeCxYDntHxH2KXk6Cdpe" target="_blank" rel="noopener noreferrer">
             <img src="/images/spotify logo 2.jpg" alt="Spotify" />
           </a>
-          <a href="https://music.apple.com/us/artist/aidan-kempf/1655182116" target="_blank" rel="noopener noreferrer">
+          <a href="https://music.apple.com/gb/artist/kempf/136093741" target="_blank" rel="noopener noreferrer">
             <img src="/images/apple music 2.jpg" alt="Apple Music" />
           </a>
           <a href="https://soundcloud.com/user-435056751" target="_blank" rel="noopener noreferrer">
             <img src="/images/souncloud logo 2.jpg" alt="SoundCloud" />
           </a>
-          <a href="https://www.instagram.com/kempf.wav/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/kempf.music/" target="_blank" rel="noopener noreferrer" className="instagram-link">
             <img src="/images/instalogo.jpg" alt="Instagram" />
           </a>
         </div>
+        <div className="copyright-text">©2026 Problem Horse Corridor</div>
       </div>
     </div>
   );
