@@ -1,13 +1,14 @@
 import React from 'react';
 import '../styles/LandingPage.css';
 import StarBackground from './StarBackground';
+import { imageUrl } from '../utils/publicAssetUrl';
 
 function LandingPageCopy() {
   return (
     <div 
       className="landing-container"
       style={{
-        backgroundImage: 'url(/images/mark-trois.gif)',
+        backgroundImage: `url(${imageUrl('mark-trois.gif')})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -17,7 +18,7 @@ function LandingPageCopy() {
       <div className="content-backdrop">
         <div className="content">
           <img 
-            src="/images/IMG_4591 2.png" 
+            src={imageUrl('IMG_4591 2.png')}
             alt="KEMPF Logo" 
             className="logo glitch"
           />

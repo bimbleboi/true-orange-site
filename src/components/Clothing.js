@@ -3,6 +3,7 @@ import StarBackground from './StarBackground';
 import '../styles/Clothing.css';
 import '../styles/LandingPage.css';
 import { triggerHaptic } from '../utils/haptics';
+import { imageUrl } from '../utils/publicAssetUrl';
 
 const Clothing = () => {
     const links = [
@@ -21,7 +22,7 @@ const Clothing = () => {
             <StarBackground />
             <div className="music-page-logo">
                 <img 
-                    src="/images/IMG_4591 2.png" 
+                    src={imageUrl('IMG_4591 2.png')}
                     alt="KEMPF Logo" 
                     className="logo glitch"
                 />
