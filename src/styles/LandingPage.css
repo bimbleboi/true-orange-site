@@ -63,6 +63,17 @@
   letter-spacing: 0.05em;
 }
 
+.spotlight-cover-link {
+  display: inline-block;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+.spotlight-cover-link:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
 .spotlight-image {
   max-width: 100%;
   width: auto;
