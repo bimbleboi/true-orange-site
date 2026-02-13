@@ -24,19 +24,12 @@ function LandingPage() {
           />
         </div>
         <div className="spotlight-cover">
-          <div className="spotlight-text">PRE-SAVE <br /> NO ONE KNOWS</div>
-          <a
-            href="https://distrokid.com/hyperfollow/kempf/no-one-knows-2?ref=release"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="spotlight-cover-link"
-          >
-            <img 
-              src={imageUrl('no one knows cover.png')}
-              alt="NO ONE KNOWS - Cover" 
-              className="spotlight-image"
-            />
-          </a>
+          <div className="spotlight-text">NO ONE KNOWS <br /> Out Now</div>
+          <img 
+            src={imageUrl('no one knows cover.png')}
+            alt="NO ONE KNOWS - Cover" 
+            className="spotlight-image"
+          />
         </div>
         <div className="streaming-links">
           <a href="https://open.spotify.com/artist/5JKeCxYDntHxH2KXk6Cdpe" target="_blank" rel="noopener noreferrer">
