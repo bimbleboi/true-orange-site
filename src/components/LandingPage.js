@@ -24,7 +24,7 @@ function LandingPage() {
           />
         </div>
         <div className="spotlight-cover">
-          <div className="spotlight-text">NO ONE KNOWS <br /> Out Now</div>
+          <div className="spotlight-text">STREAM <em className="spotlight-title">NO ONE KNOWS</em></div>
           <img 
             src={imageUrl('no one knows cover.png')}
             alt="NO ONE KNOWS - Cover" 
@@ -33,16 +33,16 @@ function LandingPage() {
         </div>
         <div className="streaming-links">
           <a href="https://open.spotify.com/artist/5JKeCxYDntHxH2KXk6Cdpe" target="_blank" rel="noopener noreferrer">
-            <img src={imageUrl('spotify logo 2.jpg')} alt="Spotify" />
+            <img src={imageUrl('spotify logo.png')} alt="Spotify" />
           </a>
           <a href="https://music.apple.com/gb/artist/kempf/136093741" target="_blank" rel="noopener noreferrer">
-            <img src={imageUrl('apple music 2.jpg')} alt="Apple Music" />
+            <img src={imageUrl('apple music logoog.png')} alt="Apple Music" />
           </a>
           <a href="https://soundcloud.com/user-435056751" target="_blank" rel="noopener noreferrer">
-            <img src={imageUrl('souncloud logo 2.jpg')} alt="SoundCloud" />
+            <img src={imageUrl('soundcloudlcoud.png')} alt="SoundCloud" />
           </a>
           <a href="https://www.instagram.com/kempf.music/" target="_blank" rel="noopener noreferrer" className="instagram-link">
-            <img src={imageUrl('instalogo.jpg')} alt="Instagram" />
+            <img src={imageUrl('Instagram_logo_2016.svg.png')} alt="Instagram" />
           </a>
         </div>
         <div className="copyright-text">©2026 Problem Horse Corridor</div>
