@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e08bad39.css",
-    "main.js": "/static/js/main.a63fbf4c.js",
+    "main.css": "/static/css/main.94fd3484.css",
+    "main.js": "/static/js/main.9c3cd906.js",
+    "static/media/trueorangesite.png": "/static/media/trueorangesite.da58c07c6505dfd0c85a.png",
+    "static/media/transgenderorange.png": "/static/media/transgenderorange.b1de9da9d73c4bcc97cd.png",
     "index.html": "/index.html",
-    "main.e08bad39.css.map": "/static/css/main.e08bad39.css.map",
-    "main.a63fbf4c.js.map": "/static/js/main.a63fbf4c.js.map"
+    "main.94fd3484.css.map": "/static/css/main.94fd3484.css.map",
+    "main.9c3cd906.js.map": "/static/js/main.9c3cd906.js.map"
   },
   "entrypoints": [
-    "static/css/main.e08bad39.css",
-    "static/js/main.a63fbf4c.js"
+    "static/css/main.94fd3484.css",
+    "static/js/main.9c3cd906.js"
   ]
 }
