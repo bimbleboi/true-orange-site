@@ -1,9 +1,9 @@
 import React from 'react';
-import TrueOrangeLanding from './components/TrueOrangeLanding';
+import LandingPage from './components/LandingPage';
 import './styles/App.css';
 
 function App() {
-  return <TrueOrangeLanding />;
+  return <LandingPage />;
 }
 
 export default App;
