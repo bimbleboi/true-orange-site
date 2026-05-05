@@ -16,10 +16,16 @@ function easeInOutCubic(t) {
   return t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
 }
 
+const SUBSCRIBE_THANKS =
+  'Thanks! You will receive updates on our band.';
+
 export default function TrueOrangeLanding() {
   const heroLogoRef = useRef(null);
   const lowerRef = useRef(null);
   const [headerPinned, setHeaderPinned] = useState(false);
+  const [emailListValue, setEmailListValue] = useState('');
+  const [emailListStatus, setEmailListStatus] = useState('idle');
+  const [emailListError, setEmailListError] = useState('');
   const userHasScrolledRef = useRef(false);
   const hintTimerRef = useRef(null);
   const isAutoScrollingRef = useRef(false);
@@ -132,6 +138,37 @@ export default function TrueOrangeLanding() {
     };
   }, []);
 
+  const handleEmailListSubmit = async (e) => {
+    e.preventDefault();
+    setEmailListError('');
+    setEmailListStatus('loading');
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: emailListValue.trim() }),
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        setEmailListStatus('success');
+        setEmailListValue('');
+        return;
+      }
+
+      setEmailListStatus('idle');
+      setEmailListError(
+        typeof data.error === 'string'
+          ? data.error
+          : 'Something went wrong. Please try again.'
+      );
+    } catch {
+      setEmailListStatus('idle');
+      setEmailListError('Could not reach the server. Please try again.');
+    }
+  };
+
   return (
     <div className="to-page">
       <header
@@ -165,14 +202,16 @@ export default function TrueOrangeLanding() {
 
       <section ref={lowerRef} className="to-lower" aria-label="Links and mailing list">
         <div className="to-lower-inner">
+          <h2 className="to-world-tagline">Join the True Orange World</h2>
+
           <div className="to-block">
-            <h2 className="to-block-title">Upcoming Shows</h2>
+            <h3 className="to-block-title">Upcoming Shows</h3>
             <p className="to-block-text">Tickets coming soon.</p>
           </div>
 
           <div className="to-block">
             <div className="to-instagram-headrow">
-              <h2 className="to-block-title to-block-title--row">Instagram</h2>
+              <h3 className="to-block-title to-block-title--row">Instagram</h3>
               <a
                 className="to-instagram-icon-link"
                 href={INSTAGRAM_URL}
@@ -203,31 +242,53 @@ export default function TrueOrangeLanding() {
           </div>
 
           <div className="to-block">
-            <h2 className="to-block-title">Email list</h2>
+            <h3 className="to-block-title">Email list</h3>
             <p className="to-block-text">Sign up to receive email updates on the band.</p>
-            <form
-              className="to-form"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
-              <label className="to-label" htmlFor="to-email">
-                Email
-              </label>
-              <div className="to-form-row">
-                <input
-                  id="to-email"
-                  className="to-input"
-                  type="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  autoComplete="email"
-                />
-                <button className="to-button" type="submit">
-                  Sign up
-                </button>
-              </div>
-            </form>
+
+            {emailListStatus === 'success' ? (
+              <p
+                className="to-form-thanks"
+                role="status"
+                aria-live="polite"
+              >
+                {SUBSCRIBE_THANKS}
+              </p>
+            ) : (
+              <form className="to-form" onSubmit={handleEmailListSubmit}>
+                <label className="to-label" htmlFor="to-email">
+                  Email
+                </label>
+                <div className="to-form-row">
+                  <input
+                    id="to-email"
+                    className="to-input"
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autoComplete="email"
+                    value={emailListValue}
+                    onChange={(evt) => setEmailListValue(evt.target.value)}
+                    required
+                    disabled={emailListStatus === 'loading'}
+                    aria-invalid={emailListError ? 'true' : 'false'}
+                    aria-describedby={emailListError ? 'to-email-error' : undefined}
+                  />
+                  <button
+                    className="to-button"
+                    type="submit"
+                    disabled={emailListStatus === 'loading'}
+                    aria-busy={emailListStatus === 'loading'}
+                  >
+                    {emailListStatus === 'loading' ? 'Signing up…' : 'Sign up'}
+                  </button>
+                </div>
+                {emailListError ? (
+                  <p id="to-email-error" className="to-form-error" role="alert">
+                    {emailListError}
+                  </p>
+                ) : null}
+              </form>
+            )}
             <p className="to-inquiry">
               <span className="to-inquiry-label">Email for inquiries: </span>
               <a className="to-inquiry-mail" href="mailto:info@trueorange.world">
@@ -235,8 +296,6 @@ export default function TrueOrangeLanding() {
               </a>
             </p>
           </div>
-
-          <p className="to-world-tagline">Join the True Orange World</p>
         </div>
 
         <div className="to-gallery" role="group" aria-label="Band photos">

@@ -1,8 +1,15 @@
 .vercel
+.env
+.env*.local
 node_modules
 .DS_Store
-# Add any image file types you might use
-*.jpg
-*.jpeg
-*.png
-*.gif
+
+# Ignore generated build output media
+build/images/
+build/static/media/
+
+# Keep source assets trackable for deploys
+!src/assets/**/*.jpg
+!src/assets/**/*.jpeg
+!src/assets/**/*.png
+!src/assets/**/*.gif
